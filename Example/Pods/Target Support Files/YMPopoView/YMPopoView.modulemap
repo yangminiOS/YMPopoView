@@ -1,0 +1,6 @@
+framework module YMPopoView {
+  umbrella header "YMPopoView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D76C2DB984308C34E0D51E5 /* YMPopoView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YMPopoView.podspec; path = ../YMPopoView.podspec; sourceTree = "<group>"; };
+		2D76C2DB984308C34E0D51E5 /* YMPopoView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YMPopoView.podspec; path = ../YMPopoView.podspec; sourceTree = "<group>"; };
 		32C75F4BAC00856B1FD4FF35 /* Pods-YMPopoView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMPopoView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMPopoView_Example/Pods-YMPopoView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4634DB41A67DA13745059779 /* Pods_YMPopoView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YMPopoView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52D2C33B85ECA6C1068A5A7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		52D2C33B85ECA6C1068A5A7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* YMPopoView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMPopoView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		750556A541E3215ADB6EB00D /* Pods-YMPopoView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMPopoView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMPopoView_Tests/Pods-YMPopoView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D6C8B56032479097D8783E7 /* Pods-YMPopoView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMPopoView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-YMPopoView_Example/Pods-YMPopoView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A624B58DB8EA03FE27F9F880 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A624B58DB8EA03FE27F9F880 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CE86A72E95EA91AD33086590 /* Pods-YMPopoView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMPopoView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YMPopoView_Tests/Pods-YMPopoView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DDDCDF9A5462DF7B80758BC5 /* Pods_YMPopoView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YMPopoView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = T4SAW3YARN;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -458,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -504,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -517,7 +518,9 @@
 			baseConfigurationReference = 32C75F4BAC00856B1FD4FF35 /* Pods-YMPopoView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T4SAW3YARN;
 				INFOPLIST_FILE = YMPopoView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -532,7 +535,9 @@
 			baseConfigurationReference = 8D6C8B56032479097D8783E7 /* Pods-YMPopoView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T4SAW3YARN;
 				INFOPLIST_FILE = YMPopoView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
