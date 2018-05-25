@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YMPopoView_Example' do
+  pod 'YMPopoView', :path => '../'
+
+  target 'YMPopoView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
