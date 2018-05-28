@@ -9,22 +9,22 @@
 import UIKit
 
 public enum YMPopoType: Int {
-
-    case AKPopoTypeAlert = 1
     
-    case AKPopoTypeSheet = 2
+    case YMPopoTypeAlert = 1
     
-    case AKPopoTypeCustom = 3
+    case YMPopoTypeSheet = 2
+    
+    case YMPopoTypeCustom = 3
 }
 
-open class AKPopoView: UIView {
+open class YMPopoView: UIView {
     
-    var AKPopoViewBlock: (() ->())!
-    var AKPopoCompletionBlock: (() ->())!
+    var YMPopoViewBlock: (() ->())!
+    var YMPopoCompletionBlock: (() ->())!
     
     var attachedView: UIView!
     
-    var type: YMPopoType = .AKPopoTypeCustom
+    var type: YMPopoType = .YMPopoTypeCustom
     
     //动画时间
     var animationDuration: TimeInterval = 0.3
@@ -35,29 +35,28 @@ open class AKPopoView: UIView {
     
     //默认的动画
     var isDefaultAnimate: Bool = true
-
-     open  func show() {
+    
+    open  func show() {
         
-        AKPopoWindow.shareWindow().makeKeyAndVisible()
-        AKPopoWindow.shareWindow().isHidden = false
-        AKPopoWindow.shareWindow().addSubview(self)
+        YMPopoWindow.window.makeKeyAndVisible()
+        YMPopoWindow.window.isHidden = false
+        YMPopoWindow.window.addSubview(self)
     }
     
-     open func hide() {
-       
+    open func hide() {
+        
         UIView.animate(withDuration: animationDuration, animations: {
             if(self.isDefaultAnimate) {
-                
                 self.transform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
                 self.alpha = self.hideAlpha
-                AKPopoWindow.hiddAlpha()
+                YMPopoWindow.hiddAlpha()
             }
-           
+            
         }) { (bool) in
             self.removeFromSuperview()
             UIApplication.shared.delegate?.window??.makeKeyAndVisible()
-            AKPopoWindow.shareWindow().isHidden = true
+            YMPopoWindow.window.isHidden = true
         }
     }
- 
+    
 }

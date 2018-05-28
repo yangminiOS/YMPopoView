@@ -7,12 +7,17 @@
 //
 
 import UIKit
-
+import YMPopoView
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = UIColor.yellow
+        let test = TestView.init(frame: CGRect.init(x: 100, y: 100, width: 200, height: 200))
+//        view.addSubview(test)
+        YMPopoWindow.window.touchToHide = true
+        test.show()
+        
     }
 
     override func didReceiveMemoryWarning() {
