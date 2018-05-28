@@ -9,6 +9,17 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+
+
+1. import YMPopoView               //导入文件 
+
+2. class TestView: YMPopoView //自定义View 继承YMPopoView
+
+3. TestView.show                        //弹窗 
+
+4. TestView.hid                           //弹窗消失
+
+
 ## Requirements
 
 ## Installation
