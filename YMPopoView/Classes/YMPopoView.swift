@@ -25,19 +25,21 @@ public enum YMPopoType: Int {
 
 open class YMPopoView: UIView {
     
-    
-    var attachedView: UIView!
-    
+    //动画的形式
     open var type: YMPopoType = .YMPopoTypeAlert
     
-    //动画时间
+    //展示动画时间
     open var showAnimationDuration: TimeInterval = 0.3
-    
+    //动画消失时间
     open var hideAnimationDuration: TimeInterval = 0.3
     
     // 在视图消失的时候  动画最终的alpha值
     
-    var hideAlpha: CGFloat = 0.2
+    open var hideAlpha: CGFloat = 0.2
+    
+    open var defaultAlpha: CGFloat = 1.0
+    
+    var orignFrame: CGRect = CGRect.zero
     
     //默认的动画
     public var isShowDefaultAnimate: Bool = true
@@ -53,12 +55,12 @@ open class YMPopoView: UIView {
     }
     
     open func showAddTo(_ view: UIView? = nil, _ animated: Bool) {
-        
-        YMPopoBackgroundView.showBackgroundView(view)
         YMPopoBackgroundView.BackgroundView.addSubview(self)
+        YMPopoBackgroundView.showBackgroundView(view)
+        self.alpha = defaultAlpha
         isShowDefaultAnimate = animated
         if(animated) {
-            
+            orignFrame = self.frame
             switch type {
                 
             case .YMPopoTypeSheet:
@@ -105,6 +107,8 @@ open class YMPopoView: UIView {
             }) { (bool) in
                 self.removeFromSuperview()
                 YMPopoBackgroundView.hideBackgroundView()
+                self.transform = CGAffineTransform.identity
+                self.frame = self.orignFrame
             }
         }else {
             
@@ -134,7 +138,7 @@ open class YMPopoView: UIView {
             self.frame.origin.x = UIScreen.main.bounds.width
             
         default:
-            debugPrint("error")
+            debugPrint("other")
         }
     }
     
@@ -155,7 +159,7 @@ open class YMPopoView: UIView {
             self.frame.origin.x = orginalX
             
         default:
-            debugPrint("error")
+            debugPrint("other")
         }
     }
  

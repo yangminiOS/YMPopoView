@@ -18,11 +18,18 @@ class ViewController: UIViewController {
     var whiteV: CGFloat = 0.6
     
     var typeVaule: Int = 1
+    
+    var test: testView = {
+        
+        let testV = testView.init(frame: CGRect.init(x: 40, y: 300, width: UIScreen.main.bounds.size.width - 80, height: 300))
+        
+        return testV
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.yellow
+        //self.view.backgroundColor = UIColor.yellow
         
         let button = UIButton()
         //view.addSubview(button)
@@ -34,7 +41,7 @@ class ViewController: UIViewController {
     
     @objc func clickButton(){
         
-        let test = testView.init(frame: CGRect.init(x: 0, y: 300, width: view.frame.size.width, height: 200))
+        //let test = testView.init(frame: CGRect.init(x: 0, y: 300, width: view.frame.size.width, height: 200))
         
         test.type = .YMPopoTypeSheet
         test.backgroundColor = UIColor.red
@@ -45,35 +52,35 @@ class ViewController: UIViewController {
     
     }
     
-    
+    //show  动画开关
     @IBAction func animtionAction(_ sender: UISwitch) {
         
         isAnimetion = sender.isOn
     }
-    
+    //hide  动画开关
     @IBAction func hideAnimationAction(_ sender: UISwitch) {
         
         isHideAnimetion = sender.isOn
     }
-    
+    //动画样式
     @IBAction func clickTypeButton(_ sender: UIButton) {
         
         typeVaule = sender.tag
     }
     
-    
+    //背景的alpha
     @IBAction func changeAlpha(_ sender: UISlider) {
         alphaV = CGFloat(sender.value)
     }
     
-    
+    //背景的颜色
     @IBAction func changeWhite(_ sender: UISlider) {
         whiteV = CGFloat(sender.value)
     }
     
     @IBAction func showAction(_ sender: Any) {
         
-        let test = testView.init(frame: CGRect.init(x: 0, y: 300, width: view.frame.size.width, height: 200))
+        //let test = testView.init(frame: CGRect.init(x: 0, y: 300, width: view.frame.size.width, height: 200))
         test.isHideDefaultAnimate = isHideAnimetion
         if(typeVaule == 1){
             test.type = .YMPopoTypeAlert
